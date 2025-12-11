@@ -68,9 +68,11 @@ void stack_underflow(void)
 
 static void reallocate(Stack * stack)
 {
+	printf("과제 제출..\n");
 	int * tmp = (int *)malloc(2*stack->size*sizeof(Item));
 	memcpy(tmp, stack->contents, stack->size);
 	free(stack->contents);
 	stack->contents = tmp;
 }
+
 
